@@ -47,34 +47,13 @@
     <!-- EN-TÊTE / NAVIGATION -->
     <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/60 border-b border-white/10">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- LOGO TLS SVG -->
-            <a href="#" class="flex items-center gap-3 group">
-                <svg width="40" height="40" viewBox="0 0 100 100" class="transition-transform group-hover:scale-105">
-                    <defs>
-                        <!-- Dégradé Orange vers Violet Foncé -->
-                        <linearGradient id="tlsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#FF6B00" />
-                            <stop offset="100%" stop-color="#3B0764" />
-                        </linearGradient>
-                    </defs>
-                    
-                    <!-- Cercle interrompu basé sur la structure des lettres T, L, S -->
-                    <g stroke="url(#tlsGradient)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <!-- Barre supérieure du T formant l'arc supérieur -->
-                        <path d="M 25 25 A 38 38 0 0 1 75 25" />
-                        <path d="M 50 25 L 50 50" />
-                        
-                        <!-- Base du L formant l'arc inférieur gauche -->
-                        <path d="M 30 50 L 30 75 A 38 38 0 0 0 55 88" />
-                        
-                        <!-- S central avec extrémités prolongeant les arcs -->
-                        <path d="M 70 38 C 70 32, 50 32, 50 50 C 50 68, 70 68, 70 78 A 38 38 0 0 1 38 88" />
-                    </g>
-                </svg>
-                
-                <span class="text-xl font-bold tracking-widest text-white">
-                    TLS <span class="text-xs text-gray-400 block font-normal tracking-normal">DEV & DATA</span>
-                </span>
+            <!-- LOGO TLS UTILISANT L'IMAGE PNG (SANS HIGHLIGHT EXTÉRIEUR) -->
+            <a href="#" class="flex items-center group">
+                <img 
+                    src="logo-tls.png" 
+                    alt="Logo TLS Dev & Data" 
+                    class="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+                >
             </a>
             <nav class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="#about" class="hover:text-orange-400 transition">À propos</a>
