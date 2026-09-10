@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio | Développeur & Data Analyst</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandOrange: '#FF6B00',
+                        brandPurple: '#8B5CF6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Texte avec dégradé Orange -> Violet */
+        .gradient-text {
+            background: linear-gradient(135deg, #FF6B00 0%, #A855F7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Bouton avec dégradé */
+        .gradient-bg {
+            background: linear-gradient(135deg, #FF6B00 0%, #8B5CF6 100%);
+        }
+        /* Bordure fine en dégradé */
+        .gradient-border {
+            border: 1px solid transparent;
+            background: linear-gradient(#000, #000) padding-box,
+                        linear-gradient(135deg, #FF6B00, #8B5CF6) border-box;
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-200 font-sans antialiased selection:bg-purple-500 selection:text-white relative overflow-x-hidden">
+
+    <!-- HALOS DE LUMIÈRE DYNAMIQUES (GLOW EFFECTS EN ARRIÈRE-PLAN) -->
+    <div class="fixed top-1/4 -left-32 w-96 h-96 bg-orange-600/20 rounded-full blur-[128px] pointer-events-none z-0"></div>
+    <div class="fixed top-2/3 -right-32 w-96 h-96 bg-purple-600/20 rounded-full blur-[128px] pointer-events-none z-0"></div>
+
+    <!-- EN-TÊTE / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/60 border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-wider text-white">
+                DEV<span class="gradient-text">&</span>DATA
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-orange-400 transition">À propos</a>
+                <a href="#services" class="hover:text-orange-400 transition">Services</a>
+                <a href="#portfolio" class="hover:text-orange-400 transition">Portfolio</a>
+                <a href="#testimonials" class="hover:text-orange-400 transition">Avis</a>
+                <a href="#contact" class="hover:text-orange-400 transition">Contact</a>
+            </nav>
+            <a href="#contact" class="gradient-bg text-white text-xs font-semibold px-4 py-2 rounded-full hover:opacity-90 transition">
+                Me contacter
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="relative z-10 pt-24">
+
+        <!-- HERO SECTION -->
+        <section class="min-h-[85vh] flex flex-col justify-center items-center text-center px-6">
+            <span class="text-xs uppercase tracking-widest px-3 py-1 rounded-full gradient-border text-gray-300 mb-6">
+                Codeur & Data Analyst Indépendant
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold max-w-4xl text-white leading-tight mb-6">
+                Transformez vos données en décors intelligibles et vos idées en <span class="gradient-text">applications performantes</span>.
+            </h1>
+            <p class="text-gray-400 max-w-2xl text-base md:text-lg mb-8">
+                J'accompagne les entreprises dans le développement sur-mesure d'outils web et l'analyse avancée de leurs données pour piloter leur croissance.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#portfolio" class="gradient-bg text-white font-medium px-6 py-3 rounded-xl hover:shadow-[0_0_20px_rgba(255,107,0,0.4)] transition">
+                    Découvrir mes projets
+                </a>
+                <a href="#services" class="border border-white/20 hover:border-white/50 text-white font-medium px-6 py-3 rounded-xl transition">
+                    Mes Prestations
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION À PROPOS -->
+        <section id="about" class="py-20 px-6 max-w-5xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-white">À propos</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4 text-gray-300">
+                    <p>
+                        Passionné par le code et l'analyse de données, je mets ma double compétence au service de vos projets. 
+                    </p>
+                    <p>
+                        Mon objectif : concevoir des applications web fluides tout en exploitant la puissance de la data pour vous aider à prendre des décisions éclairées.
+                    </p>
+                </div>
+                <!-- Technos Badges -->
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-lg text-sm">Python</span>
+                    <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-lg text-sm">SQL</span>
+                    <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-lg text-sm">Power BI / Tableau</span>
+                    <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-lg text-sm">JavaScript / HTML / CSS</span>
+                    <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-lg text-sm">Tailwind CSS</span>
+                    <span class="px-3 py-1.5 bg-neutral-900 border border-white/10 rounded-lg text-sm">Git & GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION SERVICES -->
+        <section id="services" class="py-20 px-6 max-w-5xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-white text-center">Mes Services</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="p-8 rounded-2xl bg-neutral-950 border border-white/10 hover:border-orange-500/50 transition">
+                    <div class="w-12 h-12 mb-6 rounded-xl gradient-bg flex items-center justify-center font-bold text-xl">
+                        &lt;/&gt;
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Développement Web & Outils</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Création de sites vitrines modernes, d'applications web personnalisées et d'outils d'automatisation sur-mesure répondant parfaitement à vos besoins métier.
+                    </p>
+                </div>
+                <!-- Service 2 -->
+                <div class="p-8 rounded-2xl bg-neutral-950 border border-white/10 hover:border-purple-500/50 transition">
+                    <div class="w-12 h-12 mb-6 rounded-xl gradient-bg flex items-center justify-center font-bold text-xl">
+                        📊
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Data Analysis & Dashboards</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Traitement, nettoyage de données, modélisation et création de tableaux de bord interactifs (Power BI, Streamlit, etc.) pour vous donner une vision claire de votre activité.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION PORTFOLIO (CARROUSEL) -->
+        <section id="portfolio" class="py-20 px-6 max-w-5xl mx-auto">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white">Portfolio</h2>
+                    <p class="text-gray-400 text-sm mt-1">Découvrez quelques-uns de mes récents projets</p>
+                </div>
+                <!-- Boutons Navigation Carrousel -->
+                <div class="flex space-x-2">
+                    <button id="prevBtn" class="p-2 rounded-lg bg-neutral-900 border border-white/10 hover:bg-neutral-800 transition text-white">←</button>
+                    <button id="nextBtn" class="p-2 rounded-lg bg-neutral-900 border border-white/10 hover:bg-neutral-800 transition text-white">→</button>
+                </div>
+            </div>
+
+            <!-- Conteneur Carrousel -->
+            <div class="overflow-hidden relative">
+                <div id="carouselTrack" class="flex transition-transform duration-500 ease-in-out gap-6">
+                    
+                    <!-- Projet 1 -->
+                    <div class="min-w-[80%] md:min-w-[45%] bg-neutral-950 border border-white/10 rounded-2xl overflow-hidden flex-shrink-0">
+                        <div class="h-48 bg-neutral-900 flex items-center justify-center text-gray-500">
+                            [ Capture d'écran Dashboard ]
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs text-orange-400 font-semibold uppercase">Data Analysis</span>
+                            <h3 class="text-lg font-bold text-white mt-1">Dashboard Ventes & KPI</h3>
+                            <p class="text-gray-400 text-xs mt-2">Conception d'un tableau de bord Power BI permettant de suivre en temps réel les performances commerciales.</p>
+                        </div>
+                    </div>
+
+                    <!-- Projet 2 -->
+                    <div class="min-w-[80%] md:min-w-[45%] bg-neutral-950 border border-white/10 rounded-2xl overflow-hidden flex-shrink-0">
+                        <div class="h-48 bg-neutral-900 flex items-center justify-center text-gray-500">
+                            [ Capture d'écran Web App ]
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs text-purple-400 font-semibold uppercase">Développement Web</span>
+                            <h3 class="text-lg font-bold text-white mt-1">Application de Gestion Interne</h3>
+                            <p class="text-gray-400 text-xs mt-2">Développement d'un outil web sur-mesure pour automatiser la gestion des factures et contrats clients.</p>
+                        </div>
+                    </div>
+
+                    <!-- Projet 3 -->
+                    <div class="min-w-[80%] md:min-w-[45%] bg-neutral-950 border border-white/10 rounded-2xl overflow-hidden flex-shrink-0">
+                        <div class="h-48 bg-neutral-900 flex items-center justify-center text-gray-500">
+                            [ Capture d'écran Script Python ]
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs text-orange-400 font-semibold uppercase">Python & Automation</span>
+                            <h3 class="text-lg font-bold text-white mt-1">Scraping & Pipeline de Données</h3>
+                            <p class="text-gray-400 text-xs mt-2">Automates d'extraction et nettoyage de données externes quotidiennement.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION TÉMOIGNAGES -->
+        <section id="testimonials" class="py-20 px-6 max-w-5xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-white text-center">Avis clients & Collaborateurs</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 rounded-2xl bg-neutral-950 border border-white/10">
+                    <p class="text-gray-300 text-sm italic mb-4">"Un travail rapide, rigoureux et une excellente compréhension de nos besoins métier."</p>
+                    <div class="text-xs font-semibold text-white">— Client Indépendant</div>
+                </div>
+                <div class="p-6 rounded-2xl bg-neutral-950 border border-white/10">
+                    <p class="text-gray-300 text-sm italic mb-4">"Le dashboard créé nous a permis d'économiser un temps précieux au quotidien."</p>
+                    <div class="text-xs font-semibold text-white">— Directeur d'entreprise</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION CONTACT -->
+        <section id="contact" class="py-20 px-6 max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Un projet en tête ?</h2>
+            <p class="text-gray-400 mb-8">N'hésitez pas à me contacter pour discuter de vos besoins en code ou en analyse de données.</p>
+            
+            <form class="space-y-4 text-left max-w-xl mx-auto">
+                <input type="text" placeholder="Votre nom" class="w-full px-4 py-3 rounded-xl bg-neutral-900 border border-white/10 text-white focus:outline-none focus:border-orange-500 transition">
+                <input type="email" placeholder="Votre email" class="w-full px-4 py-3 rounded-xl bg-neutral-900 border border-white/10 text-white focus:outline-none focus:border-orange-500 transition">
+                <textarea rows="4" placeholder="Votre message..." class="w-full px-4 py-3 rounded-xl bg-neutral-900 border border-white/10 text-white focus:outline-none focus:border-orange-500 transition"></textarea>
+                <button type="submit" class="w-full py-3 rounded-xl gradient-bg text-white font-bold hover:opacity-90 transition">
+                    Envoyer le message
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 py-8 text-center text-xs text-gray-500 relative z-10">
+        <p>© 2026 - Tous droits réservés. Indépendant complémentaire.</p>
+    </footer>
+
+    <!-- JS POUR LE CARROUSEL -->
+    <script>
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let index = 0;
+
+        nextBtn.addEventListener('click', () => {
+            if (index < track.children.length - 1) {
+                index++;
+                updateCarousel();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (index > 0) {
+                index--;
+                updateCarousel();
+            }
+        });
+
+        function updateCarousel() {
+            const cardWidth = track.children[0].getBoundingClientRect().width;
+            track.style.transform = `translateX(-${index * (cardWidth + 24)}px)`;
+        }
+    </script>
+</body>
+</html>
